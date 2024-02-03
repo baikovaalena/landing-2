@@ -1,0 +1,86 @@
+body {
+    width: 1920px;
+    height: 694px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 126px;
+    height: 35px;
+    flex-grow: 1;
+}
+
+.header__text {
+    color: #939393;
+    font-size: 18px;
+    font-family: "PT Sans", serif;
+    font-weight: 28;
+    flex-grow: 1;
+}
+
+.header__phone {
+    color: #939393;
+    font-size: 18px;
+    font-family: "PT Sans", serif;
+}
+
+.header__logo-search {
+    width: 20px;
+    height: 20px;
+    flex-grow: 0.3;
+}
+
+.home-page {
+    margin: 50px 300px 0 300px;
+    display: flex;
+}
+
+.home-page__title {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --primary-color: rgba(255, 255, 255, 1);
+}
+
+.title {
+    width: 592px;
+    font-size: 60px;
+    font-weight: 100;
+    color: var(--primary-color);
+    font-family: "PT Sans", serif;
+}
+
+.home-page__markers {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #BEBEBE;
+    font-weight: 28;
+    font-family: "PT Sans", serif;
+}
+
+.markers:hover {
+    display: inline;
+    color: var(--primary-color);
+    float: left;
+    border-left: 0 solid rgba(0, 0, 0, 0.85);
+    padding: 0 30px 0 30px;
+}
+
+.home-page__water {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.water {
+    width: 475px;
+    height: 656px;
+    margin-left: 100px;
+}
