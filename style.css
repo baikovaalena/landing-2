@@ -1,86 +1,248 @@
+@import url('colors.css');
+
 body {
-    width: 1920px;
-    height: 694px;
-    background-color: rgba(0, 0, 0, 0.85);
+    font-family: "PT Sans", serif;
+    background-color: var(--primory-color);
+    margin: 0 auto;
 }
 
 .header {
+    margin: 40px 40px 0 40px;
+    display: flex;
+   align-items: center;
+}
+.header__logo-text{
     display: flex;
     align-items: center;
+    gap: 30px;
+    flex-grow: 1;
 }
 
+.header__phone-img{
+    display: flex;
+    gap: 15px;
+}
 .header__logo {
     width: 126px;
     height: 35px;
-    flex-grow: 1;
 }
 
 .header__text {
-    color: #939393;
+    color: var(--grey_text);
     font-size: 18px;
-    font-family: "PT Sans", serif;
     font-weight: 28;
-    flex-grow: 1;
 }
 
 .header__phone {
-    color: #939393;
+    color: var(--grey_text);
     font-size: 18px;
-    font-family: "PT Sans", serif;
 }
 
-.header__logo-search {
+.header__img-search {
     width: 20px;
     height: 20px;
-    flex-grow: 0.3;
 }
 
-.home-page {
-    margin: 50px 300px 0 300px;
+.main {
     display: flex;
+    justify-content: center;
+    gap: 300px;
+    margin-top: 50px;
 }
 
-.home-page__title {
+.main__title {
     display: flex;
     flex-direction: column;
-}
-
-:root {
-    --primary-color: rgba(255, 255, 255, 1);
 }
 
 .title {
     width: 592px;
     font-size: 60px;
     font-weight: 100;
-    color: var(--primary-color);
-    font-family: "PT Sans", serif;
+    color: var(--white-color);
 }
 
-.home-page__markers {
+.main__markers {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    color: #BEBEBE;
-    font-weight: 28;
-    font-family: "PT Sans", serif;
+    color: var(--grey_text);
 }
 
-.markers:hover {
+.main__marker:hover {
     display: inline;
-    color: var(--primary-color);
-    float: left;
+    color: var(--white-color);
     border-left: 0 solid rgba(0, 0, 0, 0.85);
     padding: 0 30px 0 30px;
 }
 
-.home-page__water {
+.main__image{
     display: flex;
-    justify-content: flex-end;
+    position: relative;
 }
-
-.water {
+.main__water {
     width: 475px;
     height: 656px;
-    margin-left: 100px;
+}
+
+.main__price {
+    width: 145px;
+    height: 54px;
+    position: absolute;
+    top: 350px; right: 180px;
+}
+
+li {
+    list-style: none;
+    background: url(./image/Vector.svg) no-repeat 0 50%;
+    padding-left: 24px;
+}
+
+.info {
+    background-color: var(--info_background-color);
+    display: flex;
+    gap: 355px;
+    justify-content: center;
+}
+
+.info__main__text {
+    font-size: 18px;
+    line-height: 32px;
+    width: 649px;
+    height: 184px;
+}
+
+.color_text {
+    color: var(--color_text);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info__main {
+    display: flex;
+    margin-top: 30px;
+}
+
+.info__text {
+    width: 290px;
+    height: 61px;
+    font-size: 15px;
+    color: var(--grey_text);
+}
+
+.info__sub-main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info__header {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color: var(--info-header);
+}
+
+.info__sub-main_container {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .main{
+        gap: 0;
+    }
+    .main__water{
+        width: 275px;
+        height: 456px;
+    }
+    .main__title{
+        justify-content: flex-start;
+        align-self: center;
+    }
+    .title{
+        font-size: 33px;
+        width: 328px;
+        height: 80px;
+    }
+    .info{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        margin: 0 auto;
+    }
+
+    .header__phone {
+        display: none;
+    }
+
+    .header__logo-text {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header__text {
+        font-size: 13px;
+    }
+
+    .main {
+        justify-content: flex-start;
+    }
+
+    .main__water {
+        width: 200px;
+        height: 230px;
+        object-position: 55px;
+        position: absolute;
+        right: -59px;
+        bottom: -90px;
+    }
+
+    .main__image {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .main__price {
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        right: -20px;
+        top: 200px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .main__title {
+        width: 300px;
+    }
+
+    .info{
+        margin-top: 90px;
+    }
+
+    .info__main__text{
+        text-align: justify;
+        width: 330px;
+        font-size: 16px;
+    }
+
+    .info__sub-main{
+        margin-top: 90px;
+        gap: 0;
+    }
+
 }

@@ -1,0 +1,9 @@
+:root {
+    --white-color: rgba(255, 255, 255, 1);
+    --primory-color: rgba(0, 0, 0, 0.85);
+    --info_background-color: rgba(246, 246, 246, 1);
+    --color_text: rgb(217, 110, 30);
+    --grey_text: #939393;
+    --info-header:rgba(0, 0, 0, 0.85);
+
+}
