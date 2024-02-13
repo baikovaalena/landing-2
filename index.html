@@ -10,13 +10,13 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__logo-text">
-    <img src="./image/header-logo.svg" alt="header-logo" class="header__logo">
-    <p class="header__text">Разработано в Германии. Сделано в России.</p>
+    <div class="header__content">
+        <img src="./image/header-logo.svg" alt="company logo" class="header__logo">
+        <p class="header__slogan">Разработано в Германии. Сделано в России.</p>
     </div>
-    <div class="header__phone-img">
-    <a href="+7-(905)-543-23-45" class="header__phone">+7 (905) 543 23 45</a>
-    <img src="./image/search.svg" alt="header-search" class="header__img-search">
+    <div class="header__contact">
+        <a href="tel:+7-(905)-543-23-45" class="header__phone">+7 (905) 543 23 45</a>
+        <img src="./image/search.svg" alt="search" class="header__img-search">
     </div>
 </header>
 <section class="main">
@@ -28,34 +28,58 @@
             <li class="main__marker">Католог товаров</li>
         </ul>
     </div>
-    <div class="main__image">
-    <img src="./image/tap-water.svg" alt="tap-water" class="main__img-water">
-    <img src="./image/sale.svg" alt="tap-water" class="main__img-price">
+    <div class="main__cover-container">
+        <img src="./image/tap-water.svg" alt="tap-water" class="main__cover">
+        <img src="./image/sale.svg" alt="tap-water" class="main__img-price">
     </div>
 </section>
-<section class="info__container">
-<div class="info">
-    <div class="info__main">
-        <p class="info__main-text"><span class="color_text">Orange</span> – немецкая торговая марка. Главный офис и
-            основное производство расположены в Германии. Производим смесители, душевые кабины, ванны и мебель для
-            ванных комнат.
-            <br>Мы предлагаем качественную продукцию немецкого производства, которая полностью адаптирована к реалиям
-            российскиого рынка.</p>
-    </div>
-    <div class="info__additional-main">
-        <div class="info__additional-main__container">
-            <img src="./image/mini-img1.svg" class="info__img">
-            <p class="info__text"><span class="info__header">Cобственное производство</span><br> Выский уровнень
-                технологий позволяет
-                гарантировать качество продукции на протяжении 10 лет</p>
+<section class="info">
+    <div class="info__container">
+        <div class="info__main">
+            <p class="info__description"><span class="info__color-text">Orange</span> – немецкая торговая марка. Главный
+                офис и
+                основное производство расположены в Германии. Производим смесители, душевые кабины, ванны и мебель для
+                ванных комнат.
+                <br>Мы предлагаем качественную продукцию немецкого производства, которая полностью адаптирована к
+                реалиям
+                российскиого рынка.</p>
         </div>
-        <div class="info__additional-main__container">
-            <img src="./image/mini-img2.svg" class="info__img">
-            <p class="info__text"><span class="info__header">Экологичность и доступность</span><br>Уникальный состав
-                сплава делает продукцию
-                Orange безопасной для потребителя</p>
-        </div>
+        <ul class="info__facts">
+            <li class="info__fact">
+                <img src="./image/mini-img1.svg"  alt="graphic picture" class="info__img">
+                <div class="info__fact-content">
+                    <p class="info__title">Cобственное производство</p>
+                    <p class="info__text"> Выский уровнень
+                        технологий позволяет
+                        гарантировать качество продукции на протяжении 10 лет</p>
+                </div>
+            </li>
+            <li class="info__fact">
+                <img src="./image/mini-img2.svg" alt="graphic picture" class="info__img">
+                <div class="info__fact-content">
+                    <p class="info__title">Экологичность и доступность</p>
+                    <p class="info__text">Уникальный состав сплава делает продукцию Orange безопасной для
+                        потребителя</p>
+                </div>
+            </li>
+        </ul>
     </div>
-</div>
+</section>
+<section class="products">
+    <h2 class="products__title">Наша продукция</h2>
+    <ul class="products__list">
+        <li class="products__tap">
+            <p class="products__type"> Смесители </p>
+        </li>
+        <li class="products__furniture">
+            <p class="products__type"> Мебель </p>
+        </li>
+        <li class="products__shower">
+            <p class="products__type"> Душевая программа </p>
+        </li>
+        <li class="products__toilet">
+            <p class="products__type"> Фаянс </p>
+        </li>
+    </ul>
 </section>
 </body>

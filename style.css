@@ -6,9 +6,6 @@ body {
     background-color: var(--primary-color);
     margin: 0 auto;
 }
-html{
-    margin: 0 auto;
-}
 
 .header {
     margin: 40px 40px 0 40px;
@@ -16,14 +13,14 @@ html{
     align-items: center;
 }
 
-.header__logo-text {
+.header__content {
     display: flex;
     align-items: center;
     gap: 30px;
     flex-grow: 1;
 }
 
-.header__phone-img {
+.header__contact {
     display: flex;
     gap: 15px;
 }
@@ -33,7 +30,7 @@ html{
     height: 35px;
 }
 
-.header__text {
+.header__slogan {
     color: var(--grey-text);
     font-size: 18px;
     font-weight: 400;
@@ -54,12 +51,13 @@ html{
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 .main__content {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .title {
@@ -83,15 +81,13 @@ html{
     padding: 0 30px 0 30px;
 }
 
-.main__image {
+.main__cover-container {
     display: flex;
     position: relative;
 }
 
-.main__img-water {
+.main__cover {
     width: 475px;
-
-
 }
 
 .main__img-price {
@@ -102,83 +98,128 @@ html{
     right: 180px;
 }
 
-li {
+.main__marker {
     list-style: none;
     background: url(./image/Vector.svg) no-repeat 0 50%;
     padding-left: 24px;
 }
 
-.info {
+.info__container {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.info__container {
+.info {
     background-color: var(--info-background-color);
     width: 100%;
+    height: 250px;
 }
 
-.info__main-text {
+.info__description {
+    margin-top: 30px;
     font-size: 18px;
     line-height: 32px;
     width: 649px;
-    height: 184px;
 }
 
-.color_text {
+.info__color-text {
     color: var(--color-text);
     font-weight: bold;
     font-size: 30px;
 }
 
-.info__main {
-    display: flex;
-    margin-top: 30px;
-}
-
 .info__text {
-    width: 250px;
     font-size: 15px;
     color: var(--grey-text);
 }
 
-.info__additional-main {
-    margin-top: 30px;
+.info__facts {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.info__header {
+.info__title {
     font-size: 16px;
     line-height: 18px;
     font-weight: bold;
     color: var(--info-header);
 }
 
-.info__additional-main__container {
+.info__fact {
     display: flex;
+    align-items: flex-start;
     gap: 20px;
 }
 
+.info__fact-content{
+    width: 250px;
+}
+
+.info__img{
+    width: 45px;
+    height: 45px;
+}
+.products{
+    background-color: var(--info-background-color);
+}
+
+.products__title{
+    padding-left: 80px;
+    font-size: 32px;
+}
+
+.products__list{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type:none;
+}
+
+.products__type{
+    display: inline;
+    font-size: 20px;
+    color: var(--text-background-li);
+    padding: 10px 10px 10px 10px;
+}
+
+.products__list li{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.products__tap{
+    background: url(./image/tap.png) no-repeat 0 50%;
+}
+
+.products__furniture{
+    background: url(./image/bath.png) no-repeat 0 50%;
+}
+
+.products__shower{
+    background: url(./image/shower.png) no-repeat 0 50%;
+}
+
+.products__toilet{
+    background: url(./image/toilet.png) no-repeat 0 50%;
+}
 
 @media (max-width: 1200px) {
     .header {
         flex-direction: column;
     }
 
-    .main__image{
+    .main__cover-container{
         position: relative;
     }
 
-    .main__img-price{
-        display: none;
-    }
-
-    .main__img-water {
+    .main__img-price, .main__cover{
         display: none;
     }
 
@@ -196,65 +237,112 @@ li {
         width: 450px;
     }
 
-    .info {
+    .info{
+        height: 350px;
+    }
+
+    .info__container {
         flex-direction: column;
         gap: 0;
     }
 
-    .info__main{
-        justify-content: center;
-    }
-
-    .info__main-text{
+    .info__description{
         text-align: justify;
     }
 
-    .info__additional-main{
+    .info__facts{
       flex-direction: row;
         justify-content: center;
-        margin: 0 auto;
+        padding-top: 25px;
+    }
+
+    .products__list{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .products__title{
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
 }
 
-@media (max-width: 768px)and (min-width: 360px) {
+@media (max-width: 768px) {
+
     .header {
         flex-direction: column;
     }
 
+    .header__slogan{
+        display: none;
+    }
+
+    .header__logo{
+        width: 226px;
+        height: 65px;
+        margin-bottom: 20px;
+    }
+
+    .header__phone{
+        font-size: 22px;
+    }
+
+    .header__img-search{
+        width: 25px;
+        height: 25px;
+    }
+
+    .header__contact{
+        align-items: center;
+    }
+
     .title{
-        font-size: 33px;
-        width: 328px;
+        font-size: 30px;
+        width: 300px;
     }
 
     .main{
         justify-content: center;
     }
 
-    .main__img-water{
+    .main__cover,.main__img-price{
        display: none;
     }
 
-    .main__img-price{
-        display: none;
-    }
-
-    .main__image{
+    .main__cover-container{
         position: relative;
         justify-content: center;
     }
+
+    .main__content{
+        padding: 0 10px 0 10px;
+        width: auto;
+    }
+
     .info{
+        height: 65%;
+    }
+
+    .info__container{
         flex-direction: column;
-        flex-wrap: nowrap;
     }
 
-    .info__main{
-        margin-bottom: 55px;
+    .info__description{
+        width: auto;
+        padding: 0 10px 10px 10px;
     }
 
-    .info__additional-main{
+    .info__facts{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 30px;
+    }
+
+    .products{
+        width: 100%;
+    }
+    .products__list li{
+        height: 200px;
     }
 }
