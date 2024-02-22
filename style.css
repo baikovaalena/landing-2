@@ -224,7 +224,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 70px 0 0 300px;
-    padding: 0 25px 0 0;
+    padding: 0 25px 25px 0;
     gap: 20px;
 }
 
@@ -239,11 +239,10 @@ body {
     font-size: 18px;
     line-height: 32px;
     color: var(--grey-text);
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 .collections__all {
-    flex-grow: 1;
 }
 
 .collections__all-types {
@@ -281,19 +280,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.price {
     font-size: 24px;
     line-height: 24px;
     color: var(--white-color);
 }
 
-.promotion__background, .advantages__background {
+.advantages, .promotion{
     padding-top: 80px;
     background-color: var(--white-color);
 }
 
+.advantages{
+    padding-bottom: 80px;
+}
 .promotion__title {
     display: flex;
     justify-content: center;
@@ -301,24 +300,25 @@ body {
     line-height: 36px;
 }
 
-.promotion__produkts {
+.promotion__products {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-.promotion__content {
+.promotion__product {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     border: 0.5px solid gray ;
     padding: 10px;
 }
 
-.promotion__sale {
+.promotion__sales {
     display: flex;
 }
 
-.sale {
+.promotion__sale {
     width: 60px;
     height: 36px;
     font-size: 16px;
@@ -341,7 +341,8 @@ body {
     line-height: 22px;
     font-weight: 400;
     width: 260px;
-    height: 70px;
+    flex-grow: 1;
+    margin-top: 20px;
 }
 
 .promotion__price {
@@ -377,7 +378,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 70px;
-    padding-bottom: 80px;
 }
 
 .advantages__img{
@@ -412,20 +412,110 @@ body {
 }
 
 .tagline__content{
-    width: 1200px;
-    height: 160px;
+    padding: 50px;
     background-color: var(--color--tagline);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.tagline__text{
+.tagline__title{
     font-size: 28px;
     line-height: 36px;
     font-weight: 400;
     text-align: center;
     color: var(--tagline);
 }
+
+.footer{
+    margin-top: 80px;
+    padding-bottom:80px;
+}
+.footer__img{
+    width: 126px;
+    height: 35px;
+}
+.footer__info{
+    display: flex;
+    gap: 30px;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer__markers{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: var(--grey-text);
+}
+
+.footer__marker{
+    background: url(./image/Vector.svg) no-repeat 0 50%;
+    padding-left: 24px;
+}
+
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__contact-img{
+    width: 20px;
+    height: 20px;
+}
+
+.footer__phone, .footer__mail{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.footer__text{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--footer--title);
+}
+
+.footer__social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer__img-inst{
+    width: 36px;
+    height: 36px;
+}
+
+.footer__developed-company{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 10px;
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.footer__company{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--grey-text);
+}
+
+.footer__name-company{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--grey-text);
+    padding: 5px;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+}
+
 @media (max-width: 1200px) {
     .header {
         flex-direction: column;
@@ -501,7 +591,7 @@ body {
         background-size: cover;
     }
 
-    .promotion__produkts{
+    .promotion__products{
         flex-wrap: wrap;
     }
 
@@ -516,6 +606,17 @@ body {
         background-size: cover;
     }
 
+    .footer__content{
+        flex-wrap: wrap;
+    }
+
+    .footer__developed-company{
+        justify-content: center;
+    }
+
+    .footer__markers{
+        flex-direction: column;
+    }
 }
 @media (max-width: 768px) {
 
@@ -610,8 +711,20 @@ body {
         background-size: cover;
     }
 
-    .tagline__text{
+    .tagline__title{
         padding: 7px;
         font-size: 20px;
+    }
+
+    .footer__content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__markers{
+        flex-wrap: nowrap;
+    }
+
+    .footer__social-media {
+        justify-content: center;
     }
 }
