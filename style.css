@@ -1,4 +1,4 @@
-@import url('colors.css');
+@import url('variables.css');
 
 body {
     font-family: "PT Sans", serif;
@@ -99,7 +99,7 @@ body {
 
 .main__marker {
     list-style: none;
-    background: url(./image/Vector.svg) no-repeat 0 50%;
+    background: url(images/Vector.svg) no-repeat 0 50%;
     padding-left: 24px;
 }
 
@@ -165,8 +165,7 @@ body {
 
 .products {
     background-color: var(--info-background-color);
-    padding-bottom: 100px;
-    padding-top: 90px;
+    padding: 90px 0 100px 0;
 }
 
 .products__container {
@@ -200,19 +199,19 @@ body {
 }
 
 .products__tap {
-    background: url(./image/tap.png) no-repeat 0 50%;
+    background: url(images/tap.png) no-repeat 0 50%;
 }
 
 .products__furniture {
-    background: url(./image/bath.png) no-repeat 0 50%;
+    background: url(images/bath.png) no-repeat 0 50%;
 }
 
 .products__shower {
-    background: url(./image/shower.png) no-repeat 0 50%;
+    background: url(images/shower.png) no-repeat 0 50%;
 }
 
 .products__toilet {
-    background: url(./image/toilet.png) no-repeat 0 50%;
+    background: url(images/toilet.png) no-repeat 0 50%;
 }
 
 .collections {
@@ -231,7 +230,7 @@ body {
 .collections__title {
     font-size: 32px;
     line-height: 36px;
-    color: var(--title--background);
+    color: var(--title-background);
 }
 
 .collections__content {
@@ -247,7 +246,7 @@ body {
 
 .collections__all-types {
     list-style: none;
-    background: url(./image/Vector.svg) no-repeat 0 50%;
+    background: url(images/Vector.svg) no-repeat 0 50%;
     padding-left: 24px;
     color: var(--grey-text);
 }
@@ -265,7 +264,7 @@ body {
 }
 
 .collections__offer-view {
-    background: url(./image/offer.png) no-repeat 0 50%;
+    background: url(images/offer.png) no-repeat 0 50%;
     width: 988px;
     height: 665px;
     display: flex;
@@ -274,7 +273,7 @@ body {
 }
 
 .collections__price {
-    background-color: var(--color--price);
+    background-color: var(--color-price);
     width: 140px;
     height: 50px;
     display: flex;
@@ -327,8 +326,8 @@ body {
     padding: 8px 11px 8px 11px;
     border-radius: 2px;
     text-align: center;
-    color: var(--color--sale);
-    background-color: var(--color--price);
+    color: var(--color-sale);
+    background-color: var(--color-price);
 }
 
 .product__img {
@@ -355,14 +354,14 @@ body {
     font-size: 20px;
     line-height: 20px;
     font-weight: 700;
-    color: var(--color--price--promotion-section);
+    color: var(--color-price-promotion);
 }
 
 .promotion__past-price {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    color: var(--color--past-price--promotion-section);
+    color: var(--color-past-price-promotion);
     text-decoration: line-through;
 }
 
@@ -403,7 +402,7 @@ body {
     gap: 20px;
 }
 .tagline__background{
-    background: url("/image/background.png") no-repeat 0 50%;
+    background: url("/images/background.png") no-repeat 0 50%;
     width: auto;
     height: 724px;
     display: flex;
@@ -413,7 +412,7 @@ body {
 
 .tagline__content{
     padding: 50px;
-    background-color: var(--color--tagline);
+    background-color: var(--color-tagline);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -454,7 +453,7 @@ body {
 }
 
 .footer__marker{
-    background: url(./image/Vector.svg) no-repeat 0 50%;
+    background: url(images/Vector.svg) no-repeat 0 50%;
     padding-left: 24px;
 }
 
@@ -471,14 +470,13 @@ body {
 
 .footer__phone, .footer__mail{
     display: flex;
-    align-items: stretch;
     gap: 10px;
 }
 
 .footer__text{
     font-size: 16px;
     font-weight: 700;
-    color: var(--footer--title);
+    color: var(--footer-title);
 }
 
 .footer__social-media{
@@ -719,7 +717,10 @@ body {
     .footer__content{
         flex-direction: column;
         align-items: flex-start;
+        gap: 15px;
+        padding-left: 30px;
     }
+
     .footer__markers{
         flex-wrap: nowrap;
     }
@@ -727,4 +728,23 @@ body {
     .footer__social-media {
         justify-content: center;
     }
+
+    .footer__info{
+        border-bottom: solid rgba(44, 45, 46, 1) 1px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .footer__contact{
+        border-bottom: solid rgba(44, 45, 46, 1) 1px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .footer__social-media{
+        border-bottom: solid rgba(44, 45, 46, 1) 1px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
 }
